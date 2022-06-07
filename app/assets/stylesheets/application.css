@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-image: url(27735122.jpg);
+  background-size: cover;
+  background-position: center;
+  /*スクロール時の背景の固定*/
+  background-attachment: fixed;
+}
+
+/*背景画像のぼかし*/
+body:before{
+  content: '';
+  background: inherit;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+
+table {
+  background-color: #fff;
+}
